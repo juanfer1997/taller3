@@ -1,0 +1,46 @@
+{{>header}}
+<p>Esta es la página de los cursos </p>
+
+<h1> Lista de cursos</h1>
+
+{{{error}}}
+<form  method="post">
+<table class="table">
+	<thead>
+		<th>id</th>
+		<th>nombrecurso</th>
+		<th>Precio</th>
+		<th>modalidad</th>
+	</thead>
+	<tbody>
+    {{#each res1}}      
+      <tr>
+        <td>{{this.id}}</td> 
+        <td>{{this.nombrecurso}}</td>
+        <td>{{this.precio}}</td>
+        <td>{{this.modalidad}}</td>
+      </tr>       
+    {{/each}}	
+	</tbody>
+</table>
+</form>
+
+
+<form action="/cursos" method="post">
+    <div class="row">
+      <label> Registrar cursos</label>
+    <div class="col-sm">
+      <label for="nombre" class="form-label">Nombre del curso</label>
+      <input type="text" name="nombre" class="form-control" required><br>
+      <label for="nombre" class="form-label">Precio</label>
+      <input type="number" name="precio" class="form-control" required><br>
+      <label for="modalidad" class="form-label">Modalidad del curso</label>
+      <input type="text" name="modalidad" class="form-control" >
+    </div>
+    <div class="col-sm">
+      <input type="submit" class='form-control btn btn-success' >
+    </div>    
+  </div>
+ </form>
+
+{{>footer}}

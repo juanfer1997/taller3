@@ -1,0 +1,35 @@
+{{>header}}
+<p>Esta es la página del usuario </p>
+
+<h1> Lista de usuarios</h1>
+<form action="/eliminar" method="post">
+<table class="table">
+	<thead>
+		<th>eliminar</th>
+		<th>cedula</th>
+		<th>nombre</th>
+		<th>correo</th>}
+		<th>telefono</th>
+	</thead>
+	<tbody>
+	{{{listar res}}}
+	</tbody>
+</table>
+</form>
+
+<table class="table">
+	<thead>
+		<th>cedula</th>
+		<th>nombre</th>
+		<th>pais</th>
+		<th>id</th>
+		<th>curso</th>
+		<th>precio</th>
+		<th>modalidad</th>
+	</thead>
+	<tbody>
+	{{{usuariocurso}}}
+	</tbody>
+</table>
+
+{{>footer}}

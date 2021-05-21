@@ -1,0 +1,17 @@
+{{>header}}
+<p>Esta es la página de los usuarios </p>
+<h1> Lista de usuarios</h1>
+<p> Se ha eliminado a {{{nombre}}} con cédula {{{cedula}}}
+<table class="table">
+	<thead>
+		<th>cedula</th>
+		<th>nombre</th>
+		<th>correo</th>
+		<th>telefono</th>
+	</thead>
+	<tbody>
+	{{{listar res}}}
+	</tbody>
+</table>
+
+{{>footer}}

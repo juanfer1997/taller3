@@ -1,0 +1,22 @@
+{{>header}}
+<p>Esta es la página de los usuarios </p>
+<form action="/actualizar" method="post">
+<div class="row">
+      <label> Registrar usuarios</label>
+    <div class="col-sm">
+      <label for="cedula" class="form-label">Cedula</label>
+      <input type="text" name="cedula" class="form-control" value="{{{cedula}}}" readonly><br>
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" name="nombre" class="form-control" value="{{{nombre}}}"><br>
+      <label for="pais" class="form-label">correo</label>
+      <input type="text" name="pais" class="form-control" value="{{{correo}}}" >
+      <label for="pais" class="form-label">Telefono</label>
+      <input type="text" name="pais" class="form-control" value="{{{telefono}}}" >
+    </div>
+    <div class="col-sm">
+      <input type="submit" class='form-control btn btn-success' >
+    </div>    
+  </div>
+ </form>
+
+{{>footer}}

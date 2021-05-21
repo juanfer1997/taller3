@@ -1,0 +1,32 @@
+{{>header}}
+<p>Seleccione el curso que va a matricular </p>
+<form action="/usuariocurso" method="post">
+    <div class="row">
+      <label> Registrar curso</label>
+    <div class="col-sm">
+      <label for="nombre" class="form-label">Nombre del usuario</label>
+      {{{listausuarios resc}}}
+      <label for="nombre" class="form-label">Nombre del curso</label>
+      {{{listacursos resp}}}           
+    </div>
+    <div class="col-sm">
+      <input type="submit" class='form-control btn btn-success' value="Comprar" >
+    </div>    
+  </div>
+ </form>
+
+ <table class="table">
+  <thead>
+    <th>Cédula</th>
+    <th>Nombre</th>
+    <th>Curso</th>
+    <th>Precio</th>
+  </thead>
+  <tbody>  
+  {{{tablacursos tabla}}}    
+  </tbody>
+</table>
+
+
+
+{{>footer}}
